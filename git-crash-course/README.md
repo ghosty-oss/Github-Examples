@@ -103,11 +103,44 @@ git commit -m "add another exclamation mark"
 
 ## Branches
 
+List of branches
+
+```sh
+git branch
+```
+
+Create a new branch
+
+```sh
+git branch branch-name
+```
+
 ## Remote
+
+We can add remotes. but often you will just add remote via upstream when adding a branch
+
+```sh
+git remote add ...
+git branch -u origin new-feature
+```
 
 ## Stashing
 
+
+```sh
+git stash list
+git stash
+git stash save my-name
+git stash apply
+git stash pop
+```
+
 ## Merging
+
+```sh
+git checkout dev
+git merge main
+```
 
 ## Add
 
