@@ -44,8 +44,43 @@ You'll use the token when you login
 ## SSH
 
 ```sh
-git@github.com:ghosty-oss/Github-Examples.git
+git clone git@github.com:ghosty-oss/Github-Examples.git
+cd GitHub-Examples
 ```
+
+We will need to create our own SSH key pair
+
+```sh
+ssh-keygen -t rsa
+```
+
+For WSL users and if you create a non default key you might need to add it
+
+```sh
+eval 'ssh-agent'
+ssh-add /home/folder/directory/.ssh/github_id_rsa
+```
+
+We can test our connection here:
+```sh
+ssh -T git@github.com
+```
+
+## GitHub CLI
+
+Install the CLI
+
+eg Linux (Ubuntu)
+```sh
+sudo apt update
+sudo apt install gh -y
+```
+
+```sh
+gh auth login
+gh repo clone ghosty-oss/Github-Examples
+```
+
 
 
 ## Commit
